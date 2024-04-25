@@ -4,7 +4,7 @@ import { Log_six } from "./componets/longest-six";
 import { Most_Run } from "./componets/most-run";
 import { Most_Wicket } from "./componets/most-wicket";
 import Navbar_com from "./componets/navabra";
-// import { Point_Table } from "./componets/point_table";
+import { Point_Table } from "./componets/point_table";
 
 export default function Home() {
   return (
@@ -15,7 +15,7 @@ export default function Home() {
       <Most_Run />
       <Most_Wicket/>
       <Log_six/>
-      {/* <Point_Table/> */}
+      <Point_Table/>
     </main>
   );
 }
