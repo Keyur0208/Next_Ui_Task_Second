@@ -1,24 +1,23 @@
 "use client"
 import { Image, Table, TableBody, TableCell, TableColumn, Button, TableHeader, TableRow, Spinner } from "@nextui-org/react";
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import {BASE_API_URL} from '../lib/api_url'
 
 export function Point_Table() {
 
     const [isLoading, setIsLoading] = useState(true);
     const [Teamdata, setTeamdata] = useState([]);
 
-
     const fetchData = async () => {
         try {
-            const response = await fetch('https://next-ui-second.netlify.app/api/team', { cache: 'no-store' });
+            const response = await fetch(`https://next-ui-second.netlify.app/api/team`, { cache: 'no-store' });
             const data = await response.json();
             setIsLoading(false);
             setTeamdata(data.message);
-            console.log("click");
+
         } catch (error) {
             console.error('Error fetching data:', error);
         }
-        fetchData();
     };
 
     return (

@@ -1,8 +1,17 @@
 "use client"
 import { Home, SportsCricket, Star } from "@mui/icons-material";
 import { Avatar, BreadcrumbItem, Breadcrumbs, Slider, Image } from "@nextui-org/react";
+import { useState } from "react";
 
 export function Log_six() {
+
+    const handleSliderChange = (value) =>{
+        setgetvalue(value)
+    }
+        
+
+    const [getvalue, setgetvalue] = useState(26)
+
     return (
         <>
             <div className="m-2 my-5">
@@ -29,41 +38,42 @@ export function Log_six() {
                 </div>
 
                 <div className="flex justify-center">
-                    <a href="#" className="flex flex-col items-center justify-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+                    <div className="flex flex-col items-center justify-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
                         <div className="text-center" >
                             <Image className="object-cover w-full  h-96 md:h-auto md:w-48 p-3" src="/dk.jpeg" alt="" isBlurred isZoomed  />
                             Dinesh Kartik
                             <br></br>
-                            108M
+                            {getvalue}m
                         </div>
                         <div className="flex flex-row justify-between p-4 max-w-md h-[348px] gap-6  leading-normal">
                             <Slider
                                 size="md"
                                 startContent={<Avatar src="/dk.jpeg" size="lg" isBordered color="danger" />}
-                                value={108}
                                 color="danger"
                                 label="Dinesh (RCB)"
                                 radius="full"
                                 orientation="vertical"
                                 maxValue={150}
+                                defaultValue={108}
+                                onChange={handleSliderChange}
                             />
                             <br></br>
                             <Slider
                                 size="md"
                                 startContent={<Avatar src="/klassen.jpeg" size="md" isBordered color="warning" />}
-                                value={106}
                                 color="warning"
                                 className="max-w-md"
                                 label="Klaasen (SRH)"
                                 radius="lg"
                                 orientation="vertical"
                                 maxValue={110}
+                                defaultValue={106}
                             />
                             <br></br>
                             <Slider
                                 size="md"
                                 startContent={<Avatar src="/iyer.jpeg" size="sm" isBordered color="secondary" />}
-                                value={106}
+                                 defaultValue={106}
                                 color="secondary"
                                 className="max-w-md"
                                 label="Iyer (KKR)"
@@ -72,7 +82,7 @@ export function Log_six() {
                                 maxValue={110}
                             />
                         </div>
-                    </a>
+                    </div>
                 </div>
             </div >
         </>

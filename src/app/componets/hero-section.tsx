@@ -7,13 +7,13 @@ export function Hero_Section() {
 
     const [loaded, setloaded] = useState(false);
 
-    useEffect(() => {
+    // useEffect(() => {
 
-        setTimeout(() => {
-            setloaded(true);
-        }, 3000);
+    //     setTimeout(() => {
+    //         setloaded(true);
+    //     }, 3000);
 
-    }, [])
+    // }, [])
 
     return (
         <>

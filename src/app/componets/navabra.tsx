@@ -8,11 +8,11 @@ export default function Navbar_com() {
 
     const [loaded, setIsloaded] = useState(false);
 
-    useEffect(() => {
-        setTimeout(() => {
-            setIsloaded(true);
-        }, 3000)
-    }, []);
+    // useEffect(() => {
+    //     setTimeout(() => {
+    //         setIsloaded(true);
+    //     }, 3000)
+    // }, []);
 
     return (
         <Navbar isBordered>

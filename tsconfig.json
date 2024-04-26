@@ -21,6 +21,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/componets/point_table.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/componets/point_table.js", "src/app/componets/longest-six.js", "src/app/componets/most-wicket.js"],
   "exclude": ["node_modules"]
 }
