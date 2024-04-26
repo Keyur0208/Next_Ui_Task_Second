@@ -1,7 +1,6 @@
 "use client"
 import { Image, Table, TableBody, TableCell, TableColumn, Button, TableHeader, TableRow, Spinner } from "@nextui-org/react";
 import { useState } from "react";
-import {BASE_API_URL} from '../lib/api_url'
 
 export function Point_Table() {
 
@@ -10,7 +9,7 @@ export function Point_Table() {
 
     const fetchData = async () => {
         try {
-            const response = await fetch(`https://next-ui-second.netlify.app/api/team`, { cache: 'no-store' });
+            const response = await fetch("https://next-ui-second.netlify.app/api/team", { cache: 'no-store' });
             const data = await response.json();
             setIsLoading(false);
             setTeamdata(data.message);
